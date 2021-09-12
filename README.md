@@ -75,6 +75,21 @@ At the moment it allows members to view their genesis NFT by entering in its ID.
 3. Start the development server with `yarn start`
 4. Open development site by going to `http:localhost:3000`
 
+### Generatiing Static Data
+
+This script allows you to pull down the data for the DAO contract directly based on tokenId.
+It will scrape each token and pull in its information as a JSON file.
+
+It will pull data from the the [Devs For Revolution Contract](https://etherscan.io/address/0x25ed58c027921e14d86380ea2646e3a1b5c55a8b#code).
+
+**Requirements:**
+
+- [Etherscan API Key](https://etherscan.io/myapikey)
+
+```bash
+echo "ETHERSCAN_API=YOUR-API-KEY-TOKEN-HERE" > data/.env;
+```
+
 ## Contributing
 
 Thanks for showing interest in contributing to DeveloperDAO. Before submitting any changes please review our contributing gudielines in [CONTRIBUTING.md].
