@@ -82,12 +82,22 @@ It will scrape each token and pull in its information as a JSON file.
 
 It will pull data from the the [Devs For Revolution Contract](https://etherscan.io/address/0x25ed58c027921e14d86380ea2646e3a1b5c55a8b#code).
 
+**PLEASE NOTE:** The current estimated time for this entire script to run is ~22.22 hours (yes you read that right, HOURS!), so please do so sparingly. It will also exhaust nearly 80,004 API requests for the day.
+
+Data that is pulled should be generated in: `data/data.json`;
+
 **Requirements:**
 
 - [Etherscan API Key](https://etherscan.io/myapikey)
 
 ```bash
 echo "ETHERSCAN_API=YOUR-API-KEY-TOKEN-HERE" > data/.env;
+```
+
+To run:
+
+```bash
+yarn data;
 ```
 
 ## Contributing

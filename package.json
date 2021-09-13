@@ -26,7 +26,8 @@
     "lint": "eslint src --ext .js",
     "fmt": "prettier --write **/*.js",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "data": "node data/pull.js && ./node_modules/.bin/prettier data/data.json --write"
   },
   "eslintConfig": {
     "extends": [
@@ -58,8 +59,7 @@
     "lint-staged": "^11.1.2",
     "postcss": "^7",
     "prettier": "2.3.2",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "undici": "^4.5.1"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md,html,graphql}": "prettier --write"
