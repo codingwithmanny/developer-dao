@@ -14,7 +14,7 @@ const TOKEN_ID_FROM = 1;
 const TOKEN_ID_TO = 8000;
 const CONTRACT_ADDRESS =
   process.env.CONTRACT_ADDRESS || 'UNKNOWN_CONTRACT_ADDRESS';
-const API_KEY = process.env.ETHERSCAN_API || 'UNKNOWN_API_KEY';
+const API_KEY = process.env.ETHERSCAN_API_KEY || 'UNKNOWN_API_KEY';
 const INTERVAL = 1000; // 1 second
 const NETWORK_NAME = process.env.NETWORK_NAME || 'mainnet';
 const JSON_DATA = {
