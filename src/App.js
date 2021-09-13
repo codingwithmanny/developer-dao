@@ -7,7 +7,8 @@ import logo from './images/ddao_logo.jpeg';
 
 function App() {
   const { t } = useTranslation();
-  const [developerId, setDeveloperId] = useState(1);
+  const id = getSearchID();
+  const [developerId, setDeveloperId] = useState(id);
 
   const ethersConfig = {
     ethers: { Contract },
@@ -91,8 +92,30 @@ function Nft(developerId) {
           Github
         </a>
       </h5>
+      <h5 className="mt-10 text-m">
+        <div className="flex flex-row items-center">
+          {t('hosting')}
+          <a
+            className="pl-1"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://vercel.com?utm_source=developerdao&utm_campaign=oss"
+          >
+            <img
+              alt="Powered by Vercel"
+              height="32"
+              src="https://raw.githubusercontent.com/nextauthjs/next-auth/canary/www/static/img/powered-by-vercel.svg"
+            />
+          </a>
+        </div>
+      </h5>
     </>
   );
+}
+
+function getSearchID() {
+  const search = window.location.search;
+  return new URLSearchParams(search).get('id') || 1;
 }
 
 const processBase64Img = (imgStr) => {
